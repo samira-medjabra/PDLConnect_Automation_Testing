@@ -1,0 +1,1026 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title></title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa bdd-report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary"></span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Feb 24, 2025 02:22:34 AM</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('category-view')">
+<a id="nav-category" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-tag"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('exception-view')">
+<a id="nav-exception" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bug"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Feb 24, 2025 02:22:34 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Feb 24, 2025 02:22:59 AM</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Features Passed</p>
+<h3>0</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Features Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Features</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='0%'>
+<b>0</b> features passed
+</small>
+</div>
+<div>
+<small data-tooltip='100%'><b>1</b> features failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Scenarios</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='child-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='50%'><b>2</b> scenarios passed</small></div>
+<div>
+<small data-tooltip='50%'><b>2</b> scenarios failed,
+<b>0</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Steps</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='grandchild-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='70%'><b>14</b> steps passed</small></div>
+<div>
+<small data-tooltip='10%'><b>2</b> steps failed,
+<b>4</b> skipped, <b data-tooltip='%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Registration Page-Static Heade":22.786
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 category-container">
+<div class="card">
+<div class="card-header"><p>Tags</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead><tbody>
+<tr>
+<td>@VerifySelecting_A_CurrencyUpdatesProductPricesAcross_all_pages</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@TC_008</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@TC_009</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@Verify_the_header_Functionality_On_HomePage</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@RegistartionPageStaticHeader</td>
+<td>2</td>
+<td>2</td>
+<td>0</td>
+<td>0</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>@Verify_clickingTheCurrencyOption-inTheheader_displays_AT_DropdownWith_ValidCurrencyOptions</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0%</td>
+</tr>
+<tr>
+<td>@TC_0010</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@Verify_clickingTthe_“ContactUs”_link_navigates_to_TheCorrect_page</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>@TC_007</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>100%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>Engineer</td>
+<td>Mohammed Ava (Shams) </td>
+</tr>
+<tr>
+<td>Project</td>
+<td>PDL Connect</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>Google Chrome</td>
+</tr>
+<tr>
+<td>OS</td>
+<td>Windows</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 0,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 2,
+failChild: 2,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 14,
+failGrandChild: 2,
+warningGrandChild: 0,
+skipGrandChild: 4,
+infoGrandChild: 0,
+eventsCount: 5,
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-tag"></i></a>
+<ul id="tag-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">@VerifySelecting_A_CurrencyUpdatesProductPricesAcross_all_pages</a><a class="dropdown-item" href="#">@TC_008</a><a class="dropdown-item" href="#">@TC_009</a><a class="dropdown-item" href="#">@Verify_the_header_Functionality_On_HomePage</a><a class="dropdown-item" href="#">@RegistartionPageStaticHeader</a><a class="dropdown-item" href="#">@Verify_clickingTheCurrencyOption-inTheheader_displays_AT_DropdownWith_ValidCurrencyOptions</a><a class="dropdown-item" href="#">@TC_0010</a><a class="dropdown-item" href="#">@Verify_clickingTthe_“ContactUs”_link_navigates_to_TheCorrect_page</a><a class="dropdown-item" href="#">@TC_007</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="fail" test-id="1"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Registration Page-Static Heade</p>
+            <p class="text-sm">
+              <span>2:22:37 AM</span> / <span>00:00:22:786</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Registration Page-Static Heade</h5>
+<span class='badge badge-success'>02.24.2025 2:22:37 AM</span>
+<span class='badge badge-danger'>02.24.2025 2:22:59 AM</span>
+<span class='badge badge-default'>00:00:22:786</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+<div class="m-t-10 m-l-5"> I want to use this template for my feature file </div>
+</div>
+</div>
+<div class="accordion mt-4">
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="2"><span class="badge log pass-bg mr-2">Pass</span>Verify the header Functionality on HomePage</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_open_the_registration_page()">
+                <span>Given I Open the Registration Page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.pdl.hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshot/embedded1.png' src="../screenshot/embedded1.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_validate_that_header_is_displayed_at_the_top_of_the_page()">
+                <span>Then I Validate that header is displayed at the top of the page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.pdl.hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshot/embedded2.png' src="../screenshot/embedded2.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_scroll_down_to_see_if_the_header_remains_in_place()">
+                <span>Then I scroll down to see if the header remains in place</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.pdl.hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshot/embedded3.png' src="../screenshot/embedded3.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="13"><span class="badge log fail-bg mr-2">Fail</span>Verify clicking the currency option in the header displays a dropdown with valid currency options</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_open_registration_page()">
+                <span>Given I Open Registration Page.</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.Error: Unresolved compilation problem: 
+	The method VerifyRegistrationPageIsopened() is undefined for the type RegistrationPage_Quafox
+
+	at com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_open_registration_page(A1_TCS7_21_RegistrationStaticHeader_QA2.java:30)
+	at ✽.I Open Registration Page.(file:///C:/Users/Admin/Documents/Git_Project/PDLConnect_Automation_Testing/src/test/resources/features/1_TCS7_21_RegistrationStaticHeader_QA2.feature:13)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.pdl.hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshot/embedded4.png' src="../screenshot/embedded4.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_locate_the_currency_dropdown_in_the_header()">
+                <span>Then I Locate the currency dropdown in the header</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_click_the_dropdown_and_verify_that_it_displays_a_list_of_valid_currency_options_e_g_usd_eur()">
+                <span>Then I Click the dropdown and verify that it displays a list of valid currency options (e.g., USD, EUR).</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="24"><span class="badge log fail-bg mr-2">Fail</span>Verify selecting a currency updates product prices across all pages</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="">
+          <div class="card-body">
+              <div class="step fail-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.open_the_homepage()">
+                <span>Given Open the homepage</span>
+      <div>
+        <textarea disabled class="code-block">java.lang.Error: Unresolved compilation problem: 
+	The method HomePage_Opened() is undefined for the type RegistrationPage_Quafox
+
+	at com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.open_the_homepage(A1_TCS7_21_RegistrationStaticHeader_QA2.java:46)
+	at ✽.Open the homepage(file:///C:/Users/Admin/Documents/Git_Project/PDLConnect_Automation_Testing/src/test/resources/features/1_TCS7_21_RegistrationStaticHeader_QA2.feature:19)
+</textarea>
+      
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.pdl.hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshot/embedded5.png' src="../screenshot/embedded5.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_select_a_different_currency_from_the_dropdown_e_g_eur()">
+                <span>And I Select a different currency from the dropdown (e.g., EUR)</span>
+      <div>Step skipped
+      </div>
+              </div>
+              <div class="step skip-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_navigate_to_the_product_page_and_verify_that_the_product_prices_are_displayed_in_the_selected_currency()">
+                <span>Then I Navigate to the product page and verify that the product prices are displayed in the selected currency.</span>
+      <div>Step skipped
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+  <div class="card">
+    <div class="card-header" role="tab">
+      <div class="card-title">
+        <div class="node" id="35"><span class="badge log pass-bg mr-2">Pass</span>Verify clicking the “Contact Us” link navigates to the correct page</div>
+          <div class="status-avatar float-right mr-4">
+            <i class="fa fa-paperclip"></i>
+          </div>
+      </div>
+    </div>
+        <div class="collapse">
+          <div class="card-body">
+              <div class="step pass-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_open_the_homepage()">
+                <span>Given I Open the homepage</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.pdl.hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshot/embedded6.png' src="../screenshot/embedded6.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_click_the_contact_us_option_in_the_header()">
+                <span>Then I Click the “Contact Us” option in the header</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.pdl.hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshot/embedded7.png' src="../screenshot/embedded7.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="com.pdl.step_definitions.A1_TCS7_21_RegistrationStaticHeader_QA2.i_verify_that_the_user_is_redirected_to_the_contact_us_page()">
+                <span>And I Verify that the user is redirected to the “Contact Us” page</span>
+      <div>
+      </div>
+              </div>
+              <div class="step pass-bg" title="AFTER_STEP">
+                <span>com.pdl.hooks.Hooks.takeScreenshot(io.cucumber.java.Scenario)</span>
+      <div>image
+          <div class="row mb-3"><div class="col-md-3">
+<img data-featherlight='../screenshot/embedded8.png' src="../screenshot/embedded8.png">
+    
+    </div></div>
+</div>
+      <div>
+      </div>
+              </div>
+          </div>
+        </div>
+  </div>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view category-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Category</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">9</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@VerifySelecting_A_CurrencyUpdatesProductPricesAcross_all_pages</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@VerifySelecting_A_CurrencyUpdatesProductPricesAcross_all_pages</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:22:56 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='24'>Verify selecting a currency updates product prices across all pages</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify selecting a currency updates product prices across all pages</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@TC_008</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TC_008</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:22:54 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='13'>Verify clicking the currency option in the header displays a dropdown with valid currency options</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify clicking the currency option in the header displays a dropdown with valid currency options</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@TC_009</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TC_009</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:22:56 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='24'>Verify selecting a currency updates product prices across all pages</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify selecting a currency updates product prices across all pages</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Verify_the_header_Functionality_On_HomePage</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Verify_the_header_Functionality_On_HomePage</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>02:22:37 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify the header Functionality on HomePage</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify the header Functionality on HomePage</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">@RegistartionPageStaticHeader</p>
+<p class="duration text-sm">4 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@RegistartionPageStaticHeader</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>02:22:37 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify the header Functionality on HomePage</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify the header Functionality on HomePage</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:22:54 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='13'>Verify clicking the currency option in the header displays a dropdown with valid currency options</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify clicking the currency option in the header displays a dropdown with valid currency options</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:22:56 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='24'>Verify selecting a currency updates product prices across all pages</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify selecting a currency updates product prices across all pages</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>02:22:58 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='35'>Verify clicking the “Contact Us” link navigates to the correct page</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify clicking the “Contact Us” link navigates to the correct page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">@Verify_clickingTheCurrencyOption-inTheheader_displays_AT_DropdownWith_ValidCurrencyOptions</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Verify_clickingTheCurrencyOption-inTheheader_displays_AT_DropdownWith_ValidCurrencyOptions</h4>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:22:54 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='13'>Verify clicking the currency option in the header displays a dropdown with valid currency options</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify clicking the currency option in the header displays a dropdown with valid currency options</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@TC_0010</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TC_0010</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>02:22:58 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='35'>Verify clicking the “Contact Us” link navigates to the correct page</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify clicking the “Contact Us” link navigates to the correct page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@Verify_clickingTthe_“ContactUs”_link_navigates_to_TheCorrect_page</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@Verify_clickingTthe_“ContactUs”_link_navigates_to_TheCorrect_page</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>02:22:58 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='35'>Verify clicking the “Contact Us” link navigates to the correct page</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify clicking the “Contact Us” link navigates to the correct page</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>1</span>
+</span>
+<p class="name">@TC_007</p>
+<p class="duration text-sm">1 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>@TC_007</h4>
+<span status="pass" class='badge log pass-bg'>1 passed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>02:22:37 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='2'>Verify the header Functionality on HomePage</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify the header Functionality on HomePage</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div><div class="test-wrapper row view exception-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Exception</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log badge-danger'>2</span>
+</span>
+<p class="name">java.lang.Error</p>
+<p class="duration text-sm">2 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>java.lang.Error</h4>
+<span status="fail" class='badge log badge-danger'>2 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:22:56 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='16'>Given I Open Registration Page.</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify clicking the currency option in the header displays a dropdown with valid currency options.Given I Open Registration Page.</span>
+</div>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>02:22:58 AM</td>
+<td>
+<a href="#" class="linked" test-id='1' id='27'>Given Open the homepage</a>
+<div class="">
+<span class="badge badge-default">Registration Page-Static Heade.Verify selecting a currency updates product prices across all pages.Given Open the homepage</span>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@ce8b10435bcbae260c334c0d0c6b61d2c19b6168/spark/js/spark-script.js"></script>
+<script type="text/javascript"></script></body>
+</html>
