@@ -2,12 +2,11 @@ package com.eal.runners;
 
 import org.junit.After;
 import org.junit.runner.RunWith;
+
 import com.vimalselvam.cucumber.listener.Reporter;
+
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-
-//import cucumber.api.CucumberOptions;
-//import oracle.jdbc.driver.OracleDriver;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(plugin = { 
@@ -20,10 +19,10 @@ import io.cucumber.junit.CucumberOptions;
 		"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 		"com.pdl.hooks.StepNameListener"}, // here "com.pdl.hooks" this is package and stepname is insider class
 
-		features = "src/test/resources/features", 
+		features = "src/test/resources", 
 		glue = {"com.pdl.step_definitions","com.pdl.hooks"},
 		dryRun=false,
-		tags="@abc"
+		tags="   @TC-0137 "
 		
 //		monochrome=false
 )
