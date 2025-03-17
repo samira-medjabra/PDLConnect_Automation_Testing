@@ -59,19 +59,53 @@ public void navigate_to_the_drop_down_menu_on_button_mp3_playersand_enter_a_prod
 }
 
 
+
 @When("navigate to components and insert {string} and click on it")
-public void navigate_to_components_and_insert_and_click_on_it(String monitors) {
-ob.verify_navigation_to_components(monitors);
-ob.verify_inserted_keyword_monitor(monitors);
+public void navigate_to_components_and_insert_and_click_on_it(String componenets) {
+    ob.verify_navigation_to_components(componenets);
 }
 
-@Then("Click on the drop-down button.")
-public void click_on_the_drop_down_button() {
+@Then("Click on the drop-down button And enter name Name A-Z")
+public void click_on_the_drop_down_button_and_enter_name_name_a_z() {
+  ob.verify_navigation_to_components(null);
+  ob.verify_navigation_to_monitors(null);
  
 }
 
-@Then("click on sort by name\\(A-Z)")
-public void click_on_sort_by_name_a_z() {
+@And("navigate to components and click on monitors and click on it")
+public void navigate_to_components_and_click_on_monitors_and_click_on_it() {
+   ob.verify_navigation_to_components_and_monitors();
+}
+
+@Then("Click on the drop down button and enter price high-Low")
+public void click_on_the_drop_down_button_and_enter_price_high_low() {
+   ob.verify_drop_down();
+}
+
+@When("Click on search button.")
+public void click_on_search_button() {
+   ob.verify_click_on_search_and_insert_value(null);
+}
+
+@When("Enter the product name {string}.")
+public void enter_the_product_name(String string) {
+  ob.verify_mac_option();
+}
+
+@Then("Click on sort  by {string} button.")
+public void click_on_sort_by_button(String string) {
+   ob.verify_sortby();
+}
+
+
+
+    
+
+
+
+
+
+{
    
 }
 
